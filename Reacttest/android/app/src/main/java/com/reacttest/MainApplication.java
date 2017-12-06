@@ -2,7 +2,7 @@ package com.reacttest;
 
 import android.app.Application;
 
-import com.example.mylibrary.AndroidToastPackage;
+import com.example.mylibrary.AppReactPackage;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -23,7 +23,7 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),new AndroidToastPackage()
+          new MainReactPackage(),new AppReactPackage()
       );
     }
 
