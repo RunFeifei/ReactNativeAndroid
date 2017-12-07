@@ -44,7 +44,7 @@ public class PullRefreshLayout extends LinearLayout {
     private float touchDownYposition;
     private float touchMoveDistance;
 
-    private boolean isFirstInit = true;
+    private Timer timerStop;
 
     public PullRefreshLayout(Context context) {
         super(context);
@@ -101,7 +101,6 @@ public class PullRefreshLayout extends LinearLayout {
             if (view != null && view != loadingView) {
                 contentView = view;
                 contentView.setClickable(true);
-                isFirstInit = false;
             }
         }
         if (contentView == null) {
@@ -186,10 +185,6 @@ public class PullRefreshLayout extends LinearLayout {
     private final Runnable measureAndLayout = new Runnable() {
         @Override
         public void run() {
-
-            if (isFirstInit) {
-                initContentView();
-            }
             int moveDistance = (status == LoadingType.LOAD_START || status == LoadingType.LOAD_ING) ? (int) touchMoveDistance : 0;
             setLottieViewProgress(moveDistance);
             loadingView.layout(0, moveDistance - loadingView.getMeasuredHeight(), loadingView.getMeasuredWidth(), moveDistance);
@@ -200,13 +195,7 @@ public class PullRefreshLayout extends LinearLayout {
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
-        if (isFirstInit) {
-            initContentView();
-        }
-        int moveDistance = (status == LoadingType.LOAD_START || status == LoadingType.LOAD_ING) ? (int) touchMoveDistance : 0;
-        setLottieViewProgress(moveDistance);
-        loadingView.layout(0, moveDistance - loadingView.getMeasuredHeight(), loadingView.getMeasuredWidth(), moveDistance);
-        contentView.layout(0, moveDistance, contentView.getMeasuredWidth(), moveDistance + contentView.getMeasuredHeight());
+        initContentView();
     }
 
     private void onActionUp() {
@@ -235,7 +224,7 @@ public class PullRefreshLayout extends LinearLayout {
                     loadingView.getLottieView().loop(true);
                     loadingView.getLottieView().playAnimation();
                     //超时恢复原样
-                    resetInDelay(5000);
+                    resetInDelay(10000);
                 }
             }
 
@@ -263,15 +252,20 @@ public class PullRefreshLayout extends LinearLayout {
     }
 
     private void resetInDelay(int delay) {
-        //超时恢复原样
-        new Timer().schedule(new TimerTask() {
+        if (timerStop != null) {
+            timerStop.cancel();
+        }
+        timerStop = new Timer();
+        timerStop.schedule(new TimerTask() {
             @Override
             public void run() {
                 new Handler(Looper.getMainLooper()) {
                     @Override
                     public void handleMessage(Message msg) {
                         super.handleMessage(msg);
-                        reset();
+                        if (status != LoadingType.INIT) {
+                            reset();
+                        }
                     }
                 }.obtainMessage().sendToTarget();
             }
@@ -312,9 +306,27 @@ public class PullRefreshLayout extends LinearLayout {
 
     public void stopRefreshing() {
         if (touchMoveDistance == 0) {
+            requestLayout();
             return;
         }
-        reset();
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(touchMoveDistance, 0);
+        valueAnimator.setDuration(200);
+        valueAnimator.setInterpolator(new LinearInterpolator());
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                touchMoveDistance = (Float) animation.getAnimatedValue();
+                requestLayout();
+            }
+        });
+        valueAnimator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                reset();
+            }
+        });
+        valueAnimator.start();
     }
 
     public void setOnRefreshListner(@NonNull OnRefreshListner onRefreshListner) {
