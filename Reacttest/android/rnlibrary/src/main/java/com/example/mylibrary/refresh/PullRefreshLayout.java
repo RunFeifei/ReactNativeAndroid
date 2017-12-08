@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ScrollView;
 
 import java.util.Timer;
@@ -27,7 +28,7 @@ import java.util.TimerTask;
 
 /**
  * Created by PengFeifei on 2017/11/17.
- * Only surppor SrcollerView!!!
+ * Only surppor SrcollerView or ListView !!!
  * Only surppor PullDown!!!
  */
 
@@ -92,9 +93,12 @@ public class PullRefreshLayout extends LinearLayout {
 
     private void initContentView() {
         int viewCount = getChildCount();
-        if (viewCount <= 1 || viewCount > 2) {
+        if (viewCount <= 1) {
             Log.e("initContentView-->", "wrong child view count");
             return;
+        }
+        if (viewCount > 2) {
+            throw new IllegalStateException("wrong child view count");
         }
         for (int i = 0; i < viewCount; i++) {
             View view = getChildAt(i);
@@ -122,7 +126,12 @@ public class PullRefreshLayout extends LinearLayout {
             View child = recyclerView.getChildAt(0);
             return null != child && child.getTop() >= 0;
         }
-        return true;
+        if (contentView instanceof ListView) {
+            ListView listView = (ListView) contentView;
+            return listView.getCount() == 0 || (listView.getFirstVisiblePosition() == 0
+                    && listView.getChildAt(0).getTop() >= 0);
+        }
+        return false;
     }
 
     private boolean isContentViewReadyPullUp() {
@@ -133,7 +142,12 @@ public class PullRefreshLayout extends LinearLayout {
             ScrollView scrollView = (ScrollView) contentView;
             return scrollView.getScrollY() >= (scrollView.getChildAt(0).getHeight() - scrollView.getMeasuredHeight());
         }
-        return true;
+        if (contentView instanceof ListView) {
+            ListView listView = (ListView) contentView;
+            return listView.getCount() == 0 || (listView.getChildAt(listView.getLastVisiblePosition() - listView.getFirstVisiblePosition()) != null
+                    && listView.getChildAt(listView.getLastVisiblePosition() - listView.getFirstVisiblePosition()).getBottom() <= listView.getMeasuredHeight());
+        }
+        return false;
     }
 
     @Override

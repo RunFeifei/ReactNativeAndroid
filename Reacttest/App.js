@@ -4,7 +4,7 @@
  * @flow
  */
 import AndroidReactRefreshLayout from './src/PullRefreshLayout';
-import {View,AppRegistry, Dimensions, ScrollView, Text} from 'react-native';
+import {View,AppRegistry, Dimensions, ScrollView, Text,ListView} from 'react-native';
 import React, {Component} from 'react';
 
 
@@ -14,6 +14,10 @@ const {width: SCREEN_WIDTH, height: SCREEN_HEIGHT,} = Dimensions.get('window');
 export default class App extends Component {
     constructor(props, context) {
         super(props, context);
+        var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+        this.state = {
+            dataSource: ds.cloneWithRows(['row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', '111111','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', 'row 2','row 1', '111111']),
+        };
     }
 
     onRefreshStart = () => {
@@ -57,232 +61,10 @@ export default class App extends Component {
                         this.onRefreshEnd()
                     }}
                 >
-                    <ScrollView
-                    >
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                            onPress={() => {
-                                this.refs[KEY_REFRESH].doRefreshing()
-                            }}>
-                            TEST1
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST2
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST3
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST4
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST5
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST6
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST7
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST8
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST9
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST10
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST11
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST12
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST13
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST14
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST15
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST16
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST17
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST18
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'red',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST19
-                        </Text>
-                        <Text
-                            style={{
-                                width: SCREEN_WIDTH,
-                                height: 50,
-                                backgroundColor: 'blue',
-                                textAlign: 'center',
-                                textAlignVertical: 'center'
-                            }}
-                        >
-                            TEST20
-                        </Text>
-                    </ScrollView>
-
+                    <ListView
+                        dataSource={this.state.dataSource}
+                        renderRow={(rowData) => <Text>{rowData}</Text>}
+                    />
                 </AndroidReactRefreshLayout>
 
                 <Text
