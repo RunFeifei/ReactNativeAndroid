@@ -29,7 +29,7 @@ export default class App extends Component {
     render() {
         return (
 
-            <View style={{width: SCREEN_WIDTH, height: SCREEN_HEIGHT}}>
+            <View style={{width: SCREEN_WIDTH, height: SCREEN_HEIGHT,flex:1}}>
                 <Text
                     style={{
                         width: SCREEN_WIDTH,
@@ -45,6 +45,7 @@ export default class App extends Component {
                 </Text>
 
                 <AndroidReactRefreshLayout
+                    style={{flex:1}}
                     ref={KEY_REFRESH}
                     onRefreshStart={() => {
                         this.onRefreshStart()
@@ -57,7 +58,6 @@ export default class App extends Component {
                     }}
                 >
                     <ScrollView
-                        style={{width: SCREEN_WIDTH, height: SCREEN_HEIGHT}}
                     >
                         <Text
                             style={{
@@ -284,9 +284,21 @@ export default class App extends Component {
                     </ScrollView>
 
                 </AndroidReactRefreshLayout>
+
+                <Text
+                    style={{
+                        width: SCREEN_WIDTH,
+                        height: 50,
+                        backgroundColor: 'yellow',
+                        textAlign: 'center',
+                        textAlignVertical: 'center'
+                    }}
+                    onPress={() => {
+                        this.refs[KEY_REFRESH].stopRefresh()
+                    }}>
+                    stopRefresh
+                </Text>
             </View>
-
-
         );
     }
 }

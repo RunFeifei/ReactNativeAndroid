@@ -14,8 +14,6 @@ import com.airbnb.lottie.LottieAnimationView;
 
 /**
  * Created by PengFeifei on 17-7-19.
- * ProgressBar既没有scaleType属性也没有gravity属性...
- * 所以将MaterialProgressDrawable copy到工程下
  */
 
 public class DefaultLoadIngView extends LinearLayout {
