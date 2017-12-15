@@ -8,4 +8,6 @@ TODO 根据实际场景 优化封装  
 # Run  
 npm install  
 npm start  
-react-native run-android
+react-native run-android  
+# tips  
+run之前需要AndroidStudio打开生成的android文件夹 sync和build
