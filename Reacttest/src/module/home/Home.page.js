@@ -18,6 +18,11 @@ export default class Home extends Component {
         navigate('PullRefreshPage');
     }
 
+    toFlatList = () => {
+        const { navigate } = this.props.navigation;
+        navigate('FlatList');
+    }
+
 
     render() {
         return (
@@ -31,6 +36,11 @@ export default class Home extends Component {
                     onPress={() => this.toRefresh()}
                 >
                     toRefresh
+                </Text>
+                <Text
+                    onPress={() => this.toFlatList()}
+                >
+                    toFlatList
                 </Text>
             </View>
         );

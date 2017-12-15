@@ -9,6 +9,7 @@ import { StackNavigator } from 'react-navigation';
 import HomePage from './module/home/Home.page';
 import ToastPage from './module/toast/Toast.page';
 import PullRefreshPage from './module/pull/PullRefresh.page';
+import FlatList from './module/pull/FlatList.page';
 
 export default class App extends Component {
     constructor(props, context) {
@@ -24,6 +25,7 @@ const Navigator = StackNavigator(
         HomePage: { screen: HomePage },
         ToastPage: { screen: ToastPage },
         PullRefreshPage: { screen: PullRefreshPage },
+        FlatList: { screen: FlatList },
     },
     {
         initialRouteName: 'HomePage',
