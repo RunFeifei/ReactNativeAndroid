@@ -22,6 +22,10 @@ export default class Home extends Component {
         const { navigate } = this.props.navigation;
         navigate('FlatList');
     }
+    PullScroll = () => {
+        const { navigate } = this.props.navigation;
+        navigate('PullScroll');
+    }
 
 
     render() {
@@ -41,6 +45,11 @@ export default class Home extends Component {
                     onPress={() => this.toFlatList()}
                 >
                     toFlatList
+                </Text>
+                <Text
+                    onPress={() => this.PullScroll()}
+                >
+                    PullScroll
                 </Text>
             </View>
         );

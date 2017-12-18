@@ -10,6 +10,7 @@ import HomePage from './module/home/Home.page';
 import ToastPage from './module/toast/Toast.page';
 import PullRefreshPage from './module/pull/PullRefresh.page';
 import FlatList from './module/pull/FlatList.page';
+import PullScroll from './module/pull/PullScrollpage';
 
 export default class App extends Component {
     constructor(props, context) {
@@ -26,6 +27,7 @@ const Navigator = StackNavigator(
         ToastPage: { screen: ToastPage },
         PullRefreshPage: { screen: PullRefreshPage },
         FlatList: { screen: FlatList },
+        PullScroll: { screen: PullScroll },
     },
     {
         initialRouteName: 'HomePage',
