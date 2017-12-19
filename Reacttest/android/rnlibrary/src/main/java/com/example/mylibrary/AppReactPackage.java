@@ -1,6 +1,6 @@
 package com.example.mylibrary;
 
-import com.example.mylibrary.refresh.ReactRefreshLayout;
+import com.example.mylibrary.refresh.ReactRefreshLayoutManager;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -27,7 +27,7 @@ public class AppReactPackage implements ReactPackage {
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         List<ViewManager> result = new ArrayList<ViewManager>();
-        result.add(new ReactRefreshLayout());
+        result.add(new ReactRefreshLayoutManager());
         return result;
     }
 }
