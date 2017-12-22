@@ -3,7 +3,7 @@
 DONE 调用native Toast  
 DONE 将native的下拉组件封装成RN的普通组件使用(目前只支持ListView ScrollView) 下拉动画为lottie  
 DONE RefreshFlatList FlatList结合Lottie动画集成下拉刷新(非映射成SwipeLayout的方式)  
-TODO 根据实际场景 优化封装  
+TODO 根据实际场景 优化封装  
 DONE MPAndroidChart(v3.0.2)的移植到Rn上
 
 # Run  
