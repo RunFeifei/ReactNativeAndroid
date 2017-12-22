@@ -17,7 +17,7 @@ import java.util.Map;
  * Created by PengFeifei on 2017/12/6.
  */
 
-public class ReactRefreshLayout extends ViewGroupManager<PullRefreshLayout> {
+public class ReactRefreshLayoutManager extends ViewGroupManager<PullRefreshLayout> {
 
     private static final int DO_REFRESH = 0;
     private static final int STOP_REFRESH = 1;

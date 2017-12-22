@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-    AppRegistry,
     TouchableHighlight,
     Image
 } from 'react-native';
@@ -11,6 +10,8 @@ import ToastPage from './module/toast/Toast.page';
 import PullRefreshPage from './module/pull/PullRefresh.page';
 import FlatList from './module/pull/FlatList.page';
 import PullScroll from './module/pull/PullScrollpage';
+import ChartPage from './module/chart/ChartPage';
+import LineChartPage from './module/chart/LineChartPage';
 
 export default class App extends Component {
     constructor(props, context) {
@@ -28,6 +29,8 @@ const Navigator = StackNavigator(
         PullRefreshPage: { screen: PullRefreshPage },
         FlatList: { screen: FlatList },
         PullScroll: { screen: PullScroll },
+        ChartPage: { screen: ChartPage },
+        LineChartPage: { screen: LineChartPage },
     },
     {
         initialRouteName: 'HomePage',

@@ -22,7 +22,9 @@
 		"react-native-triangle": "0.0.9",
 		"react-navigation": "^1.0.0-beta.11",
 		"react-addons-pure-render-mixin": "^15.6.2",
-		"lottie-react-native": "^2.3.1"
+		"lottie-react-native": "^2.3.1",
+		"prop-types": "^15.5.10",
+		"immutability-helper": "2.4.0"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",

@@ -26,6 +26,14 @@ export default class Home extends Component {
         const { navigate } = this.props.navigation;
         navigate('PullScroll');
     }
+    ChartPage = () => {
+        const { navigate } = this.props.navigation;
+        navigate('ChartPage');
+    }
+    LineChartPage = () => {
+        const { navigate } = this.props.navigation;
+        navigate('LineChartPage');
+    }
 
 
     render() {
@@ -50,6 +58,16 @@ export default class Home extends Component {
                     onPress={() => this.PullScroll()}
                 >
                     PullScroll
+                </Text>
+                <Text
+                    onPress={() => this.ChartPage()}
+                >
+                    ChartPage
+                </Text>
+                <Text
+                    onPress={() => this.LineChartPage()}
+                >
+                    LineChartPage
                 </Text>
             </View>
         );
