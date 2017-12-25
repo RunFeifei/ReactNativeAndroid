@@ -7,10 +7,10 @@ import com.example.mylibrary.wuxudong.rncharts.listener.RNOnChartValueSelectedLi
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.github.mikephil.charting.charts.Chart;
-import com.github.mikephil.charting.charts.RadarChart;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.RadarEntry;
+import com.mock.mpchart.mikephil.charting.charts.Chart;
+import com.mock.mpchart.mikephil.charting.charts.RadarChart;
+import com.mock.mpchart.mikephil.charting.components.YAxis;
+import com.mock.mpchart.mikephil.charting.data.RadarEntry;
 
 public class RadarChartManager extends YAxisChartBase<RadarChart, RadarEntry> {
 

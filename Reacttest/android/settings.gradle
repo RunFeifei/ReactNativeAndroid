@@ -1,5 +1,5 @@
 rootProject.name = 'Reacttest'
-include ':lottie-react-native'
+include ':lottie-react-native', ':mpchart'
 project(':lottie-react-native').projectDir = new File(rootProject.projectDir, '../node_modules/lottie-react-native/src/android')
 
 include ':app', ':rnlibrary'

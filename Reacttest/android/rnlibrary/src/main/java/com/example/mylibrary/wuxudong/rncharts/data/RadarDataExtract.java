@@ -6,10 +6,10 @@ import com.example.mylibrary.wuxudong.rncharts.utils.ConversionUtil;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
-import com.github.mikephil.charting.data.RadarData;
-import com.github.mikephil.charting.data.RadarDataSet;
-import com.github.mikephil.charting.data.RadarEntry;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
+import com.mock.mpchart.mikephil.charting.data.RadarData;
+import com.mock.mpchart.mikephil.charting.data.RadarDataSet;
+import com.mock.mpchart.mikephil.charting.data.RadarEntry;
+import com.mock.mpchart.mikephil.charting.interfaces.datasets.IDataSet;
 
 import java.util.ArrayList;
 

@@ -5,13 +5,13 @@ import android.graphics.drawable.Drawable;
 import android.widget.TextView;
 
 import com.example.mylibrary.R;
-import com.github.mikephil.charting.charts.Chart;
-import com.github.mikephil.charting.components.MarkerView;
-import com.github.mikephil.charting.data.CandleEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.utils.MPPointF;
-import com.github.mikephil.charting.utils.Utils;
+import com.mock.mpchart.mikephil.charting.charts.Chart;
+import com.mock.mpchart.mikephil.charting.components.MarkerView;
+import com.mock.mpchart.mikephil.charting.data.CandleEntry;
+import com.mock.mpchart.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.highlight.Highlight;
+import com.mock.mpchart.mikephil.charting.utils.MPPointF;
+import com.mock.mpchart.mikephil.charting.utils.Utils;
 
 import java.util.List;
 import java.util.Map;

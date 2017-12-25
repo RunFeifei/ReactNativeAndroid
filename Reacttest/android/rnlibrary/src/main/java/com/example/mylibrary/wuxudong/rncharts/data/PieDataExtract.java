@@ -7,10 +7,10 @@ import com.example.mylibrary.wuxudong.rncharts.utils.ConversionUtil;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
+import com.mock.mpchart.mikephil.charting.data.PieData;
+import com.mock.mpchart.mikephil.charting.data.PieDataSet;
+import com.mock.mpchart.mikephil.charting.data.PieEntry;
+import com.mock.mpchart.mikephil.charting.interfaces.datasets.IDataSet;
 
 import java.util.ArrayList;
 

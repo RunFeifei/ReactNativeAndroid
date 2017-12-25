@@ -4,14 +4,14 @@ import com.example.mylibrary.wuxudong.rncharts.charts.CustomFormatter;
 import com.example.mylibrary.wuxudong.rncharts.charts.DateFormatter;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.BarLineScatterCandleBubbleDataSet;
-import com.github.mikephil.charting.data.DataSet;
-import com.github.mikephil.charting.data.LineRadarDataSet;
-import com.github.mikephil.charting.data.LineScatterCandleRadarDataSet;
-import com.github.mikephil.charting.formatter.LargeValueFormatter;
-import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.mock.mpchart.mikephil.charting.components.Legend;
+import com.mock.mpchart.mikephil.charting.components.YAxis;
+import com.mock.mpchart.mikephil.charting.data.BarLineScatterCandleBubbleDataSet;
+import com.mock.mpchart.mikephil.charting.data.DataSet;
+import com.mock.mpchart.mikephil.charting.data.LineRadarDataSet;
+import com.mock.mpchart.mikephil.charting.data.LineScatterCandleRadarDataSet;
+import com.mock.mpchart.mikephil.charting.formatter.LargeValueFormatter;
+import com.mock.mpchart.mikephil.charting.formatter.PercentFormatter;
 
 /**
  * https://github.com/PhilJay/MPAndroidChart/wiki/The-DataSet-class

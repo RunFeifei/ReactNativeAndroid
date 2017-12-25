@@ -4,10 +4,10 @@ import com.example.mylibrary.wuxudong.rncharts.utils.BridgeUtils;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.github.mikephil.charting.charts.BarLineChartBase;
-import com.github.mikephil.charting.charts.Chart;
-import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.charts.BarLineChartBase;
+import com.mock.mpchart.mikephil.charting.charts.Chart;
+import com.mock.mpchart.mikephil.charting.components.YAxis;
+import com.mock.mpchart.mikephil.charting.data.Entry;
 
 public abstract class BarLineChartBaseManager<T extends BarLineChartBase, U extends Entry> extends YAxisChartBase<T, U> {
 

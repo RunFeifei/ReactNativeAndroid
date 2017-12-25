@@ -9,10 +9,10 @@ import com.example.mylibrary.wuxudong.rncharts.utils.ConversionUtil;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
-import com.github.mikephil.charting.data.CandleData;
-import com.github.mikephil.charting.data.CandleDataSet;
-import com.github.mikephil.charting.data.CandleEntry;
-import com.github.mikephil.charting.interfaces.datasets.IDataSet;
+import com.mock.mpchart.mikephil.charting.data.CandleData;
+import com.mock.mpchart.mikephil.charting.data.CandleDataSet;
+import com.mock.mpchart.mikephil.charting.data.CandleEntry;
+import com.mock.mpchart.mikephil.charting.interfaces.datasets.IDataSet;
 
 import java.util.ArrayList;
 

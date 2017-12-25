@@ -14,9 +14,9 @@ import com.facebook.react.bridge.ReadableType;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.github.mikephil.charting.animation.Easing;
-import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.data.PieEntry;
+import com.mock.mpchart.mikephil.charting.animation.Easing;
+import com.mock.mpchart.mikephil.charting.charts.PieChart;
+import com.mock.mpchart.mikephil.charting.data.PieEntry;
 
 import java.util.Map;
 

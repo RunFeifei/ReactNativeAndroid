@@ -5,8 +5,8 @@ import com.example.mylibrary.wuxudong.rncharts.data.DataExtract;
 import com.example.mylibrary.wuxudong.rncharts.data.LineDataExtract;
 import com.example.mylibrary.wuxudong.rncharts.listener.RNOnChartValueSelectedListener;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.charts.LineChart;
+import com.mock.mpchart.mikephil.charting.data.Entry;
 
 public class LineChartManager extends BarLineChartBaseManager<LineChart, Entry> {
 
