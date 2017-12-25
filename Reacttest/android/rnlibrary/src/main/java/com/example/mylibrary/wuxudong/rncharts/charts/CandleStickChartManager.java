@@ -4,8 +4,8 @@ import com.example.mylibrary.wuxudong.rncharts.data.CandleDataExtract;
 import com.example.mylibrary.wuxudong.rncharts.data.DataExtract;
 import com.example.mylibrary.wuxudong.rncharts.listener.RNOnChartValueSelectedListener;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.github.mikephil.charting.charts.CandleStickChart;
-import com.github.mikephil.charting.data.CandleEntry;
+import com.mock.mpchart.mikephil.charting.charts.CandleStickChart;
+import com.mock.mpchart.mikephil.charting.data.CandleEntry;
 
 public class CandleStickChartManager extends BarLineChartBaseManager<CandleStickChart, CandleEntry> {
 

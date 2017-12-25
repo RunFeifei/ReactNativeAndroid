@@ -5,8 +5,8 @@ import com.example.mylibrary.wuxudong.rncharts.data.CombinedDataExtract;
 import com.example.mylibrary.wuxudong.rncharts.data.DataExtract;
 import com.example.mylibrary.wuxudong.rncharts.listener.RNOnChartValueSelectedListener;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.github.mikephil.charting.charts.CombinedChart;
-import com.github.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.charts.CombinedChart;
+import com.mock.mpchart.mikephil.charting.data.Entry;
 
 public class CombinedChartManager extends BarLineChartBaseManager<CombinedChart, Entry> {
 

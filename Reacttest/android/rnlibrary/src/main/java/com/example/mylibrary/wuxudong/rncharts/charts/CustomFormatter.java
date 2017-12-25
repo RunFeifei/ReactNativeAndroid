@@ -1,10 +1,10 @@
 package com.example.mylibrary.wuxudong.rncharts.charts;
 
-import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
-import com.github.mikephil.charting.formatter.IValueFormatter;
-import com.github.mikephil.charting.utils.ViewPortHandler;
+import com.mock.mpchart.mikephil.charting.components.AxisBase;
+import com.mock.mpchart.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.formatter.IAxisValueFormatter;
+import com.mock.mpchart.mikephil.charting.formatter.IValueFormatter;
+import com.mock.mpchart.mikephil.charting.utils.ViewPortHandler;
 
 import java.text.DecimalFormat;
 

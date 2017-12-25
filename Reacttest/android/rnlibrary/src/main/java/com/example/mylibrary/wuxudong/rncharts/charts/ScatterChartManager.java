@@ -5,8 +5,8 @@ import com.example.mylibrary.wuxudong.rncharts.data.DataExtract;
 import com.example.mylibrary.wuxudong.rncharts.data.ScatterDataExtract;
 import com.example.mylibrary.wuxudong.rncharts.listener.RNOnChartValueSelectedListener;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.github.mikephil.charting.charts.ScatterChart;
-import com.github.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.charts.ScatterChart;
+import com.mock.mpchart.mikephil.charting.data.Entry;
 
 public class ScatterChartManager extends BarLineChartBaseManager<ScatterChart, Entry> {
 

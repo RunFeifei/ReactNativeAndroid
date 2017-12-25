@@ -5,10 +5,10 @@ import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
-import com.github.mikephil.charting.charts.Chart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.mock.mpchart.mikephil.charting.charts.Chart;
+import com.mock.mpchart.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.highlight.Highlight;
+import com.mock.mpchart.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.lang.ref.WeakReference;
 

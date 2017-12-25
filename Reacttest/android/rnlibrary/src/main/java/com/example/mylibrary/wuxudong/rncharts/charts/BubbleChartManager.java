@@ -5,8 +5,8 @@ import com.example.mylibrary.wuxudong.rncharts.data.BubbleDataExtract;
 import com.example.mylibrary.wuxudong.rncharts.data.DataExtract;
 import com.example.mylibrary.wuxudong.rncharts.listener.RNOnChartValueSelectedListener;
 import com.facebook.react.uimanager.ThemedReactContext;
-import com.github.mikephil.charting.charts.BubbleChart;
-import com.github.mikephil.charting.data.BubbleEntry;
+import com.mock.mpchart.mikephil.charting.charts.BubbleChart;
+import com.mock.mpchart.mikephil.charting.data.BubbleEntry;
 
 public class BubbleChartManager extends ChartBaseManager<BubbleChart, BubbleEntry> {
 

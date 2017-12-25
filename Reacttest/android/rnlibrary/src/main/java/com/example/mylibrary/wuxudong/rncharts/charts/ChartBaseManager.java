@@ -11,21 +11,21 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.annotations.ReactProp;
-import com.github.mikephil.charting.animation.Easing.EasingOption;
-import com.github.mikephil.charting.charts.Chart;
-import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.components.Description;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.Legend.LegendForm;
-import com.github.mikephil.charting.components.Legend.LegendPosition;
-import com.github.mikephil.charting.components.LegendEntry;
-import com.github.mikephil.charting.components.LimitLine;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.XAxis.XAxisPosition;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.github.mikephil.charting.formatter.LargeValueFormatter;
-import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.mock.mpchart.mikephil.charting.animation.Easing.EasingOption;
+import com.mock.mpchart.mikephil.charting.charts.Chart;
+import com.mock.mpchart.mikephil.charting.components.AxisBase;
+import com.mock.mpchart.mikephil.charting.components.Description;
+import com.mock.mpchart.mikephil.charting.components.Legend;
+import com.mock.mpchart.mikephil.charting.components.Legend.LegendForm;
+import com.mock.mpchart.mikephil.charting.components.Legend.LegendPosition;
+import com.mock.mpchart.mikephil.charting.components.LegendEntry;
+import com.mock.mpchart.mikephil.charting.components.LimitLine;
+import com.mock.mpchart.mikephil.charting.components.XAxis;
+import com.mock.mpchart.mikephil.charting.components.XAxis.XAxisPosition;
+import com.mock.mpchart.mikephil.charting.data.Entry;
+import com.mock.mpchart.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.mock.mpchart.mikephil.charting.formatter.LargeValueFormatter;
+import com.mock.mpchart.mikephil.charting.formatter.PercentFormatter;
 
 public abstract class ChartBaseManager<T extends Chart, U extends Entry> extends SimpleViewManager {
 
