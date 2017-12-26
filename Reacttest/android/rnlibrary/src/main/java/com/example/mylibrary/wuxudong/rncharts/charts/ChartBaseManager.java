@@ -247,7 +247,12 @@ public abstract class ChartBaseManager<T extends Chart, U extends Entry> extends
         if (BridgeUtils.validate(propMap, ReadableType.Number, "textSize")) {
             marker.getTvContent().setTextSize(propMap.getInt("textSize"));
         }
-
+        if (BridgeUtils.validate(propMap, ReadableType.Number, "xOffsetStartEnd")) {
+            marker.setYOffsetStratEnd(propMap.getDouble("xOffsetStartEnd"));
+        }
+        if (BridgeUtils.validate(propMap, ReadableType.Number, "offsetY")) {
+            marker.setYOffset( propMap.getInt("offsetY"));
+        }
         chart.setMarker(marker);
     }
 

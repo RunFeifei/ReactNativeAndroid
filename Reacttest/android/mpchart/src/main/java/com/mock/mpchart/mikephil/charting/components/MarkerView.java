@@ -2,6 +2,7 @@ package com.mock.mpchart.mikephil.charting.components;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -9,7 +10,6 @@ import android.widget.RelativeLayout;
 import com.mock.mpchart.mikephil.charting.charts.Chart;
 import com.mock.mpchart.mikephil.charting.data.Entry;
 import com.mock.mpchart.mikephil.charting.highlight.Highlight;
-import com.mock.mpchart.mikephil.charting.utils.FSize;
 import com.mock.mpchart.mikephil.charting.utils.MPPointF;
 
 import java.lang.ref.WeakReference;
@@ -25,6 +25,25 @@ public class MarkerView extends RelativeLayout implements IMarker {
     private MPPointF mOffset = new MPPointF();
     private MPPointF mOffset2 = new MPPointF();
     private WeakReference<Chart> mWeakChart;
+
+    private Index index;
+
+    protected enum Index {
+        START_LEFT("START_LEFT"), END_RIGHT("END_RIGHT"), NORMAL("NORMAL");
+
+        private String name;
+
+        private Index(String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+    }
+
+    /*只对START_LEFT END_RIGHT有效!!!!*/
+    private double xOffsetStartEnd = 0;
 
     /**
      * Constructor. Sets up the MarkerView with a custom layout resource.
@@ -66,6 +85,17 @@ public class MarkerView extends RelativeLayout implements IMarker {
         mOffset.y = offsetY;
     }
 
+    public void setYOffset(float offsetY) {
+        if (mOffset == null) {
+            mOffset = new MPPointF();
+        }
+        mOffset.y = offsetY;
+    }
+
+    public void setYOffsetStratEnd(double offset) {
+        this.xOffsetStartEnd = offset;
+    }
+
     @Override
     public MPPointF getOffset() {
         return mOffset;
@@ -92,13 +122,13 @@ public class MarkerView extends RelativeLayout implements IMarker {
         float height = getHeight();
 
         if (posX + mOffset2.x < 0) {
-            mOffset2.x = - posX;
+            mOffset2.x = -posX;
         } else if (chart != null && posX + width + mOffset2.x > chart.getWidth()) {
             mOffset2.x = chart.getWidth() - posX - width;
         }
 
         if (posY + mOffset2.y < 0) {
-            mOffset2.y = - posY;
+            mOffset2.y = -posY;
         } else if (chart != null && posY + height + mOffset2.y > chart.getHeight()) {
             mOffset2.y = chart.getHeight() - posY - height;
         }
@@ -117,13 +147,24 @@ public class MarkerView extends RelativeLayout implements IMarker {
 
     @Override
     public void draw(Canvas canvas, float posX, float posY) {
+        Log.i("draw", posX + "-->" + posY);
 
         MPPointF offset = getOffsetForDrawingAtPoint(posX, posY);
+        float offsetX = (getIndex() == null || getIndex().equals(Index.NORMAL)) ? 0 : (getIndex().equals(Index.START_LEFT) ? -30 : 30);
+        offsetX = (float) (offsetX + (offsetX > 0 ? xOffsetStartEnd * 1 : xOffsetStartEnd * -1));
 
         int saveId = canvas.save();
         // translate to the correct position and draw
-        canvas.translate(posX + offset.x, posY + offset.y);
+        canvas.translate(posX + offset.x + offsetX, posY + offset.y);
         draw(canvas);
         canvas.restoreToCount(saveId);
+    }
+
+    public Index getIndex() {
+        return index;
+    }
+
+    public void setIndex(Index index) {
+        this.index = index;
     }
 }
