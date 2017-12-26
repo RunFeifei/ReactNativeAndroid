@@ -1,4 +1,6 @@
 package com.example.mylibrary.wuxudong.rncharts.charts;
+import android.util.Log;
+
 import com.example.mylibrary.wuxudong.rncharts.utils.BridgeUtils;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.ReadableType;
@@ -16,7 +18,12 @@ public abstract class YAxisChartBase<T extends Chart, U extends Entry> extends C
     public abstract void setYAxis(Chart chart, ReadableMap propMap);
 
     protected void setYAxisConfig(YAxis axis, ReadableMap propMap) {
-
+        if (BridgeUtils.validate(propMap, ReadableType.Number, "leftAxisMaximum")) {
+            axis.setAxisMaximum(propMap.getInt("leftAxisMaximum"));
+        }
+        if (BridgeUtils.validate(propMap, ReadableType.Number, "leftAxisMinimum")) {
+            axis.setAxisMinimum(propMap.getInt("leftAxisMinimum"));
+        }
         if (BridgeUtils.validate(propMap, ReadableType.Boolean, "inverted")) {
             axis.setInverted(propMap.getBoolean("inverted"));
         }
