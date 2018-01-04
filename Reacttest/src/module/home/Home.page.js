@@ -34,6 +34,14 @@ export default class Home extends Component {
         const { navigate } = this.props.navigation;
         navigate('LineChartPage');
     }
+    TemingPage = () => {
+        const { navigate } = this.props.navigation;
+        navigate('TemingPage');
+    }
+    TemePage = () => {
+        const { navigate } = this.props.navigation;
+        navigate('TemePage');
+    }
 
 
     render() {
@@ -68,6 +76,16 @@ export default class Home extends Component {
                     onPress={() => this.LineChartPage()}
                 >
                     LineChartPage
+                </Text>
+                <Text
+                    onPress={() => this.TemingPage()}
+                >
+                    TemingPage
+                </Text>
+                <Text
+                    onPress={() => this.TemePage()}
+                >
+                    TemePage
                 </Text>
             </View>
         );
