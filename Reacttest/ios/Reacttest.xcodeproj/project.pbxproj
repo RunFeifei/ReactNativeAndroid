@@ -37,6 +37,8 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		98B511BF81D24EAFB8889793 /* libLottieReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D17C21FC33430BA401A6A3 /* libLottieReactNative.a */; };
+		B6C01D09DF904C24A7B4B1CD /* libRNZipArchive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C69A9EDBE3434C90F1623A /* libRNZipArchive.a */; };
+		C9A5AEC5807548D1B096FD63 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4889C285EBE45F1991E7256 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +268,9 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		ABBF032365F149C68057DFA3 /* LottieReactNative.xcodeproj */ = {isa = PBXFileReference; name = "LottieReactNative.xcodeproj"; path = "../node_modules/lottie-react-native/src/ios/LottieReactNative.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		45D17C21FC33430BA401A6A3 /* libLottieReactNative.a */ = {isa = PBXFileReference; name = "libLottieReactNative.a"; path = "libLottieReactNative.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		F50496E0D3DD45E388D1C1C4 /* RNZipArchive.xcodeproj */ = {isa = PBXFileReference; name = "RNZipArchive.xcodeproj"; path = "../node_modules/react-native-zip-archive/ios/RNZipArchive.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		98C69A9EDBE3434C90F1623A /* libRNZipArchive.a */ = {isa = PBXFileReference; name = "libRNZipArchive.a"; path = "libRNZipArchive.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A4889C285EBE45F1991E7256 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +300,8 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				98B511BF81D24EAFB8889793 /* libLottieReactNative.a in Frameworks */,
+				B6C01D09DF904C24A7B4B1CD /* libRNZipArchive.a in Frameworks */,
+				C9A5AEC5807548D1B096FD63 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +471,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				ABBF032365F149C68057DFA3 /* LottieReactNative.xcodeproj */,
+				F50496E0D3DD45E388D1C1C4 /* RNZipArchive.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -484,6 +492,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ReacttestTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				8098E4357E5A403E936D28C2 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -508,6 +517,15 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		8098E4357E5A403E936D28C2 /* Frameworks */ = {
+			isa = "PBXGroup";
+			children = (
+				A4889C285EBE45F1991E7256 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -1012,10 +1030,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
+					"$(SRCROOT)\..\node_modules\react-native-zip-archive\ios/**",
 				);
 			};
 			name = Debug;
@@ -1037,10 +1057,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
+					"$(SRCROOT)\..\node_modules\react-native-zip-archive\ios/**",
 				);
 			};
 			name = Release;
@@ -1063,6 +1085,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
+					"$(SRCROOT)\..\node_modules\react-native-zip-archive\ios/**",
 				);
 			};
 			name = Debug;
@@ -1084,6 +1107,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
+					"$(SRCROOT)\..\node_modules\react-native-zip-archive\ios/**",
 				);
 			};
 			name = Release;
@@ -1114,10 +1138,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
+					"$(SRCROOT)\..\node_modules\react-native-zip-archive\ios/**",
 				);
 			};
 			name = Debug;
@@ -1148,10 +1174,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\lottie-react-native\src\ios\LottieReactNative",
+					"$(SRCROOT)\..\node_modules\react-native-zip-archive\ios/**",
 				);
 			};
 			name = Release;
@@ -1177,6 +1205,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1201,6 +1230,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
