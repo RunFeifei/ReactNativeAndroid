@@ -38,11 +38,18 @@ export default class Home extends Component {
         const { navigate } = this.props.navigation;
         navigate('TemingPage');
     }
-    TemePage = () => {
+    ZipPage = () => {
         const { navigate } = this.props.navigation;
-        navigate('TemePage');
+        navigate('ZipPage');
     }
-
+    DownLoadPage = () => {
+        const { navigate } = this.props.navigation;
+        navigate('DownLoadPage');
+    }
+    SKinPage = () => {
+        const { navigate } = this.props.navigation;
+        navigate('SKinPage');
+    }
 
     render() {
         return (
@@ -83,9 +90,19 @@ export default class Home extends Component {
                     TemingPage
                 </Text>
                 <Text
-                    onPress={() => this.TemePage()}
+                    onPress={() => this.ZipPage()}
                 >
-                    TemePage
+                    ZipPage
+                </Text>
+                <Text
+                    onPress={() => this.DownLoadPage()}
+                >
+                    DownLoadPage
+                </Text>
+                <Text
+                    onPress={() => this.SKinPage()}
+                >
+                    SKinPage
                 </Text>
             </View>
         );
