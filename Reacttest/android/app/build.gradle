@@ -147,6 +147,7 @@ dependencies {
     compile project(':lottie-react-native')
     compile project(path: ':react-native-zip-archive')
     compile project(':react-native-fs')
+    compile project(':react-native-i18n')
 }
 
 // Run this once to be able to run the application with BUCK

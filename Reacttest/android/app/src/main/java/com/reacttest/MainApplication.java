@@ -2,6 +2,7 @@ package com.reacttest;
 
 import android.app.Application;
 
+import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.example.mylibrary.AppReactPackage;
 import com.example.mylibrary.wuxudong.rncharts.MPAndroidChartPackage;
 import com.facebook.react.ReactApplication;
@@ -30,6 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new RNZipArchivePackage(),
               new RNFSPackage(),
+              new RNI18nPackage(),
             new LottiePackage(),new AppReactPackage(),new MPAndroidChartPackage()
       );
     }

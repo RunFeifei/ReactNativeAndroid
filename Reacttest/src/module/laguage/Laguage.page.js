@@ -1,0 +1,1 @@
+import {Text} from 'react-native';import React, {Component} from 'react';import I18n from './res/i18n';export default class Demo extends Component {    render() {        return (            <Text>{I18n.t('greeting')}</Text>        )    }}

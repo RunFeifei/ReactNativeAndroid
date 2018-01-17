@@ -50,6 +50,10 @@ export default class Home extends Component {
         const { navigate } = this.props.navigation;
         navigate('SKinPage');
     }
+    LanguagePage = () => {
+        const { navigate } = this.props.navigation;
+        navigate('LanguagePage');
+    }
 
     render() {
         return (
@@ -103,6 +107,11 @@ export default class Home extends Component {
                     onPress={() => this.SKinPage()}
                 >
                     SKinPage
+                </Text>
+                <Text
+                    onPress={() => this.LanguagePage()}
+                >
+                    LanguagePage
                 </Text>
             </View>
         );

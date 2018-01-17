@@ -16,6 +16,7 @@ import TemingPage from './module/theming/Teming.page';
 import ZipPage from './module/zip/ZipDemo.page';
 import DownLoadPage from './module/download/DownLoad.page';
 import SKinPage from './module/skin/Skin.page';
+import LanguagePage from './module/laguage/Laguage.page';
 
 export default class App extends Component {
     constructor(props, context) {
@@ -39,6 +40,7 @@ const Navigator = StackNavigator(
         ZipPage: { screen: ZipPage },
         DownLoadPage: { screen: DownLoadPage },
         SKinPage: { screen: SKinPage },
+        LanguagePage: { screen: LanguagePage },
     },
     {
         initialRouteName: 'HomePage',
