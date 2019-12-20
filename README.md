@@ -5,7 +5,9 @@ DONE 将native的下拉组件封装成RN的普通组件使用(目前只支持Lis
 DONE RefreshFlatList FlatList结合Lottie动画集成下拉刷新(非映射成SwipeLayout的方式)  
 TODO 根据实际场景 优化封装  
 DONE MPAndroidChart(v3.0.2)的移植到Rn上  
-DONE 由于优化调整LineChart maker在边缘的位置将MPAndroidChart(v3.0.2)源码copy到本地
+DONE 由于优化调整LineChart maker在边缘的位置将MPAndroidChart(v3.0.2)源码copy到本地  
+# rn的mpn贡献库  
+https://github.com/RunFeifei/ReactNative-npm-repos
 
 # Run  
 npm install  
